@@ -115,5 +115,5 @@ frq(proc_elsoc$sexo)
 
 # 5. Exportar base procesada ---- 
 stargazer(proc_elsoc, type="text")
-save(proc_elsoc,file = "[ruta hacia carpeta local en su computador]/ELSOC_ess_merit2016.RData")
+#save(proc_elsoc,file = "[ruta hacia carpeta local en su computador]/ELSOC_ess_merit2016.RData")
 save(proc_elsoc,file = "output/ELSOC_ess_merit2016.RData")
