@@ -1,6 +1,6 @@
-# Codigo practica 1: Preparación de datos en R.
+# Codigo practica 1: Preparacion de datos en R.
 
-# 1. Cargar librerías ----
+# 1. Cargar librerias ----
 install.packages("pacman")
 pacman::p_load(dplyr, sjmisc, car, sjlabelled, stargazer)
 
@@ -21,7 +21,7 @@ View(elsoc_2016)
 find_var(data = elsoc_2016,"esfuerzo")
 
 ## Seleccion de variables 
-proc_elsoc <- elsoc_2016 %>% select(c18_09, # percepcipn meritocracia esfuerzo
+proc_elsoc <- elsoc_2016 %>% select(c18_09, # percepcion meritocracia esfuerzo
                                     c18_10, # percepcion meritocracia talento
                                     d01_01, # estatus social subjetivo
                                     m01,    # nivel educacional
@@ -62,7 +62,7 @@ proc_elsoc$m01 <- car::recode(proc_elsoc$m01, "c(1,2)=1; c(3)=2;c(4,5)=3;c(6,7)=
 proc_elsoc$m0_sexo <- car::recode(proc_elsoc$m0_sexo, "1=0;2=1")
 
 ## Etiquetado
-# Meritocracia= esfuerzo y talento
+# Meritocracia = esfuerzo y talento
 proc_elsoc <- proc_elsoc %>% rename("mesfuerzo"=c18_09, # meritocracia esfuerzo
                                     "mtalento" =c18_10) # meritocracia talento
 
