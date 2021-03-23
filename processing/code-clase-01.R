@@ -110,7 +110,7 @@ proc_elsoc$edad <- set_label(x = proc_elsoc$edad,label = "Edad") # Cambiar
 frq(proc_elsoc$mesfuerzo)
 frq(proc_elsoc$mtalento)
 frq(proc_elsoc$pmerit)
-frq(proc_elsoc$m01)
+frq(proc_elsoc$edcine)
 frq(proc_elsoc$sexo)
 
 # 5. Exportar base procesada ---- 
