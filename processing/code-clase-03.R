@@ -1,4 +1,4 @@
-# Codigo practica 3: Preparacion de datos en R.
+# Codigo practica 3: Regresion simple.
 
 # 1. Cargar librerias ----
 pacman::p_load(stargazer, ggplot2, dplyr)
