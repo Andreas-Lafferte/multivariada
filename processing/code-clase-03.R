@@ -22,6 +22,7 @@ stargazer(datos %>% select(juegos_x,puntos_y) , type = "text")
 # 4. Bivariados ----
 ## Grafico
 g=ggplot(datos, aes(x=juegos_x, y=puntos_y)) +
+  labs(x = "Juegos previos", y = "Puntos obtenidos") +
   geom_point()
 g
 
@@ -30,7 +31,7 @@ cor(datos$juegos_x,datos$puntos_y)
 
 ## Grafico de medias condicionales del ejemplo
 g2=ggplot(datos, aes(x=juegos_x, y=puntos_y)) +
-  geom_point() +
+  geom_point() + labs(x = "Juegos previos", y = "Puntos obtenidos") +
   geom_smooth(method=lm, se=FALSE)
 g2
 
