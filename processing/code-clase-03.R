@@ -11,7 +11,7 @@ datos <- read.csv("https://multivariada.netlify.app/slides/03-regsimple1/tacatac
 datos <- read.csv("input/tacataca.txt", sep="")
 
 # 3. Descriptivos ---- 
-## Verificacion daros
+## Verificacion datos
 View(datos)
 sapply(datos, class)
 
@@ -37,6 +37,7 @@ g2
 # 5. Modelo e hipotesis ----
 ## Calculo paso a paso de parametros del ejemplo
 
+## Para estos calculos revisar explicacion en pagina web
 datos$difx=datos$juegos_x-mean(datos$juegos_x)
 datos$dify=datos$puntos_y-mean(datos$puntos_y)
 #Creamos un vector para juegos_x y para puntos_y en funcion de sus medias
@@ -48,7 +49,7 @@ sum(datos$difcru) #Suma de los productos o diferencia cruzada
 sum(datos$difx2) #Suma de la diferencia del promedio de X al cuadrado
 
 ## Estimacion modelo de regresion simple
-reg1 <-lm(puntos_y ~ juegos_x, data = datos)
+reg1 <-lm(puntos_y ~ juegos_x, data = datos) # la estructura de la funcion es: objeto <- lm(dependiente ~ independiente, data=datos)
 reg1
 
 stargazer(reg1, type = "text") # Tabla
