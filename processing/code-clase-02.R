@@ -11,12 +11,15 @@ pacman::p_load(dplyr, #Manipulacion de datos
                sessioninfo) # Información de la sesion de trabajo
 
 # 2. Cargar datos ----
+## Desde computador local
+load("output/ELSOC_ess_merit2016.RData")
+
 ## Desde internet
 load(url("https://multivariada.netlify.app/assignment/data/proc/ELSOC_ess_merit2016.RData"))
 
 names(proc_elsoc)
 dim(proc_elsoc) 
-sapply(proc_elsoc, class) #naturaleza variables de la base
+sapply(proc_elsoc, class) #naturaleza variables
 
 # 3. Descriptivos ----
 ## Tablas descruptivas
