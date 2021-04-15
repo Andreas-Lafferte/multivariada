@@ -20,6 +20,9 @@ stargazer(datos, type = "text")
 stargazer(datos %>% select(juegos_x,puntos_y) , type = "text")
 
 # 4. Bivariados ----
+#¿tiene relación la experiencia previa (juegos jugados previamente) con el desempeño actual 
+# (puntos obtenidos)?
+
 ## Grafico
 g=ggplot(datos, aes(x=juegos_x, y=puntos_y)) +
   labs(x = "Juegos previos", y = "Puntos obtenidos") +
@@ -28,6 +31,9 @@ g
 
 ## Correlación
 cor(datos$juegos_x,datos$puntos_y)
+
+#¿Cuántos puntos (Y) se obtienen según la experiencia previa de juego (X)?: La media condicionada de Y según el valor de X
+# La pregunta cambia.
 
 ## Grafico de medias condicionales del ejemplo
 g2=ggplot(datos, aes(x=juegos_x, y=puntos_y)) +

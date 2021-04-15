@@ -83,7 +83,8 @@ tab_corr(proc_elsoc,
          triangle = "lower") 
 
 ## Matriz
-corrplot.mixed(M) 
+corrplot.mixed(M)
+
 
 ## Grafico (scatter)
 plot_scatter(proc_elsoc, edad, ess)
