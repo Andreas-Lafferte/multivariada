@@ -41,6 +41,9 @@ g2=ggplot(datos, aes(x=juegos_x, y=puntos_y)) +
   geom_smooth(method=lm, se=FALSE)
 g2
 
+
+# Residuos : observado - predicho
+
 # 5. Modelo e hipotesis ----
 ## Calculo paso a paso de parametros del ejemplo
 
