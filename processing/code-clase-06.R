@@ -55,7 +55,7 @@ col_actmodel<-lm(colGPA ~ ACT, data=gpa1)
 col_hsmodel<-lm(colGPA ~  hsGPA, data=gpa1)
 col_model <- lm(colGPA ~ ACT + hsGPA, data = gpa1)
 
-sjPlot::tab_model(list(col_actmodel, col_hsmodel,col_model), show.ci=FALSE, p.style = "asterisk", dv.labels = c("Modelo 1", "Modelo 2", "Modelo 3"),string.pred = "Predictores", string.est = "β")
+sjPlot::tab_model(list(col_actmodel, col_hsmodel,col_model), show.ci=FALSE, p.style = "stars", dv.labels = c("Modelo 1", "Modelo 2", "Modelo 3"),string.pred = "Predictores", string.est = "β")
 
 # 5. Interpretacion ---- 
 # Pueden visitar el siguiente link: https://spark.adobe.com/page/NIkrQh58TJtwj/
@@ -87,7 +87,7 @@ head(gpa1) #Mostrar los primeros elementos de la base de datos
 
 act_hs_model <- lm(colGPA ~ res_act_hs, data = gpa1) # Estimar regresión simple con parcialización de ACT
 
-sjPlot::tab_model(list(col_actmodel, col_hsmodel,col_model, act_hs_model), show.ci=FALSE, p.style = "asterisk", dv.labels = c("Modelo 1", "Modelo 2", "Modelo 3", "Modelo 4"),string.pred = "Predictores", string.est = "β")
+sjPlot::tab_model(list(col_actmodel, col_hsmodel,col_model, act_hs_model), show.ci=FALSE, p.style = "stars", dv.labels = c("Modelo 1", "Modelo 2", "Modelo 3", "Modelo 4"),string.pred = "Predictores", string.est = "β")
 
 # 7. Control estadistico ---- 
 plot_model(col_model, show.values = TRUE)+ theme_sjplot()
@@ -96,4 +96,3 @@ plot_model(col_model, show.values = TRUE)+ theme_sjplot()
 ## Pero para interpretar tenemos que rastrear nuestras hipotesis.
 
 ## La regresion multiple imita la situacion constante de una variable sin restringir los valores de ningun predictor. 
-
